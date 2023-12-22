@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>historoi</title>
+</head>HISTOROI_INF</head>
+<body>
+    <form action="/inference" method="post">
+        <label for="username">Username:</label>
+        <input type="text" name="username" required>
+        <br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" required>
+        <br>
+
+        <label for="input_type">Select Input Type:</label>
+        <select name="input_type" required>
+            <option value ="None">Select Mode SingleFile/Directory with MultipleFiles.
+            <option value="file">SingleFileMode</option>
+            <option value="directory">Directory with MultipleFiles</option>
+        </select>
+        <br>
+
+        <label for="input_value">Input Value:</label>
+        <input type="text" name="input_value" required>
+        <br>
+
+        <label for="mgfnlevel">Magnification Level:</label>
+        <input type="number" name="mgfnlevel" step="1" required>
+        <br>
+
+        <button type="submit">Run Inference</button>
+    </form>
+</body>
+</html>
