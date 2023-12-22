@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucket to Bucket Synchronization App</title>
+</head>
+<body>
+    <h1>Bucket to Bucket Synchronization</h1>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <form method="POST" action="/b2bsync">
+        <label for="source_bucket">Select Source Bucket:</label>
+        <select name="source_bucket">
+            <option value="caib-aiims">caib-aiims</option>
+            <option value="caib-pgimer">caib-pgimer</option>
+            <option value="caib-rgcirc">caib-rgcirc</option>
+            <!-- Add more options as needed -->
+        </select>
+        <br>
+        <input type="submit" value="Sync Files">
+    </form>
+</body>
+</html>
