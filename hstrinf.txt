@@ -1,0 +1,11 @@
+Flask
+pma_python
+torch
+torchvision
+numpy
+pandas
+matplotlib
+pathlib
+tqdm
+shapely
+boto3
