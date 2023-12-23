@@ -25,9 +25,9 @@ st.image('/drive4/Anshuman/testing_project/boto3uploadfiles/im.png')
 st.sidebar.image("/drive4/Anshuman/testing_project/boto3uploadfiles/Logo_r.png", use_column_width=True)
 
 
-access_key_id = 'caib-pathadmin'
-secret_key = 'DI2WC8g/ttSFf+02KN1ADtbeX0PX9fJaCzjJdsqN'
-host = "http://10.100.76.46:9020"
+access_key_id = 'accesskey'
+secret_key = 'secretkey'
+host = "hostkey"
 s3 = boto3.client('s3', aws_access_key_id=access_key_id, aws_secret_access_key=secret_key, use_ssl=True, endpoint_url=host)
 
 
@@ -218,9 +218,9 @@ def main():
             st.write('Upload complete!','Successfuly added to',selected_target_folder)
             #if selected_target_folder == 'tmc_diagnostic':
                 #file_s4 = 'TMC_diagnostic_actrec'+'/'+file_s3
-                #y1 = core.get_fingerprint(file_s4,sessionID=core.connect('https://caib-pma.actrec.gov.in/core/','tmccomputpath','Z5XPLQ2I'))
+                #y1 = core.get_fingerprint(file_s4,sessionID=core.connect('urlhost/','username','password'))
                 #st.write('finger_print_generated as',y1,'. Removing file from local folder permanently')
-                #y2 = core.get_fingerprint(f2,sessionID=core,connect('https://caib-pma.actrec.gov.in/core/','tmccomputpath','Z5XPLQ2I'))
+                #y2 = core.get_fingerprint(f2,sessionID=core,connect('urlhost/','username','password'))
                 #st.write('finger print of file with same name earlier',y2)
                 #remarks = 
                 #log_entry = log_file_upload()
@@ -239,9 +239,9 @@ def main():
                     #st.write('Log Entry',log_entry)
             #else:
                 #if selected_targeted_folder == 'caib_wsi':
-                    #y1 = core.get_fingerprint(file_s3,sessionID=core.connect('https://caib-pma.actrec.gov.in/core/','tmccomputpath','Z5XPLQ2I'))
+                    #y1 = core.get_fingerprint(file_s3,sessionID=core.connect('urlhost/','username','password'))
                     #st.write('finger_print_generated as',y1)
-                    #y2 = core.get_fingerprint(f2,sessionID=core.connect('https://caib-pma.actrec.gov.in/core/','tmccomputpath','Z5XPLQ2I'))
+                    #y2 = core.get_fingerprint(f2,sessionID=core.connect('urlhost/','username','password'))
                     #st.write('finger print of file with same name earlier',y2)
                     #remarks = 
                     #log_entry = log_file_upload()
