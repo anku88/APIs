@@ -92,12 +92,12 @@ def copy_files(source_bucket, selected_files, source_bucket_objects, s3):
 
 
 # Initialize the S3 client
-access_key_id = 'caib-pathadmin'
-secret_key = 'DI2WC8g/ttSFf+02KN1ADtbeX0PX9fJaCzjJdsqN'
-host = "http://10.100.76.46:9020"
+access_key_id = 'acceskeyid'
+secret_key = 'secretkey'
+host = "hosturl"
 s3 = boto3.client('s3', aws_access_key_id=access_key_id, aws_secret_access_key=secret_key, use_ssl=True, endpoint_url=host)
 
-sessionID=core.connect('http://10.100.76.62/core/','tmccomputpath','Z5XPLQ2I')
+sessionID=core.connect('urlhost','username','password')
 
 
 @app.route('/b2bsync', methods=['GET', 'POST'])
