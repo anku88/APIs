@@ -43,7 +43,7 @@ def copy_files(source_bucket, selected_files, source_bucket_objects, s3):
                 fpkey = str(Path(fp_bucket) / key)
 
                 try:
-                    sessionID=core.connect('http://10.100.76.62/core/','tmccomputpath','Z5XPLQ2I')
+                    sessionID=core.connect('urlhost/','username','password')
                     y = core.get_fingerprint(fpkey, sessionID)
                 except Exception as e:
                     flash(f"Error getting fingerprint for file '{key}': {e}")
